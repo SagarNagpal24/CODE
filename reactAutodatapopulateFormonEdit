@@ -1,0 +1,9 @@
+//handle edit form change  after edit click if data is changed in input tabs then this code works
+  const handleEditFormchange = (event) => {
+    event.preventDefault();
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
+    let newFormData = { ...editFormData };
+    newFormData[fieldName] = fieldValue;
+
+    SetEditFormData(newFormData);
